@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[top=2.5cm,left=2.5cm,right=2.5cm,bottom=2.5cm,headsep=0.3in,headheight=1in]{geometry}
+\usepackage{multirow}
+\usepackage[ngerman]{babel}
+\usepackage{float}
+
+
+\input{Titelblatt}  %Definiert Variablen für das Titelblatt
+
+\begin{document}
+
+%Titelblatt
+\thispagestyle{empty}
+\newgeometry{top=20mm, left=18.25mm, right=18.25mm, bottom=20mm}
+\noindent
+\begin{tabular}{|p{4.5cm}|p{7.5cm}|p{2.5cm}|p{2cm}|} %17.35mm
+    \hline
+    \vspace{0.4cm}
+    \multirow{2}{4.5cm}{\hspace{0.7cm}\includegraphics{img/titel/Labor_Protokoll_Logo.jpg}} & \multirow{2}{7.5cm}{\begin{center}{\huge Laboratorium}\\\vspace{0.25cm} Raumbezeichnung: \hspace{0.25cm} \titelraumbezeichnung \end{center}} & \vspace{0.05cm} Katalognummer:\vspace{0.3cm} & \vspace{0.06cm}\hspace{0.7cm}{\Large\titelkatalognummer}\\
+    \cline{3-4}
+     & & \vspace{0.05cm}Tag der Übung:\vspace{0.3cm} & \vspace{0.14cm} {\large\titeluebungdatum} \\
+    \hline
+    \vspace{0.35cm} {\large Gruppe: \titelgruppe} & \vspace{0.1cm} {Protokoll: \hspace{0.27cm} \titelnameprotokoll \vspace{0.1cm} \newline Mitglieder: \hspace{0.1cm} \titelnameteam} \vspace{0.2cm} & \vspace{0.35cm} {\large Klasse} & \vspace{0.35cm} {\Large\titelklasse} \\
+    \hline
+    \multicolumn{4}{|p{17cm}|}{%Bei Bild vspace unten ändern
+    \vspace{18cm}}\\
+    \hline
+\end{tabular}
+
+\vspace{-1px}
+\noindent
+\begin{tabular}{|p{2.3cm}|p{1.8cm}|p{7.9cm}|p{2.5cm}|p{1.58cm}|}
+    \vspace{0.1cm}Lehrer\vspace{0.2cm} & \vspace{0.1cm}\titellehrer & \vspace{0.15cm} \multirow{2}{7.1cm}{\centerline{Titel der Übung}\vspace{0.2cm}\newline\centerline{\huge \textbf{\titeltitel}}} & \vspace{0px} Übungsnummer & \vspace{1px}\titeluebungsnummer\\
+    \cline{1-2}\cline{4-5}
+    \vspace{0px}Geprüft\vspace{0.15cm} & \vspace{0px} \titelgeprueftdatum &  & \vspace{0px}Abgabe am\vspace{0.15cm} & \vspace{0px}\titelabgabedatum \\
+    \hline
+\end{tabular}
+\newgeometry{top=2.5cm,left=2.5cm,right=2.5cm,bottom=2.5cm,headsep=0.3in,headheight=1in}
+
+%Inhaltsverzeichnis
+\tableofcontents
+\newpage
+
+%Begin der Dokumentation
+
+
+\end{document}
