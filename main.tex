@@ -1,9 +1,10 @@
-\documentclass{article}
+\documentclass[twoside]{article}
 \usepackage{graphicx}
 \usepackage[top=2.5cm,left=2.5cm,right=2.5cm,bottom=2.5cm,headsep=0.3in,headheight=1in]{geometry}
 \usepackage{multirow}
 \usepackage[ngerman]{babel}
 \usepackage{float}
+\usepackage{fancyhdr}
 
 
 \input{Titelblatt}  %Definiert Variablen für das Titelblatt
@@ -37,6 +38,13 @@
     \hline
 \end{tabular}
 \newgeometry{top=2.5cm,left=2.5cm,right=2.5cm,bottom=2.5cm,headsep=0.3in,headheight=1in}
+
+%Kopf- und Fußzeile
+\pagestyle{fancy}
+\fancyhead[R]{\titelnameprotokoll} %Protokollist oben rechts
+\fancyhead[L]{\titeluebungdatum}   %Übungsdatum oben links
+\fancyfoot[C]{\titeltitel}         %Titel der Übung unten mittig
+\fancyfoot[O]{\thispage}           %Seitennummer unten außen
 
 %Inhaltsverzeichnis
 \tableofcontents
